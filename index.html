@@ -356,6 +356,34 @@ section { padding: 5rem 2rem; }
 }
 
 /* ===== PREISE ===== */
+/* ===== AKTUELLES / NEWS ===== */
+#aktuelles { background: var(--sand); }
+.news-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+}
+.news-card {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  background: var(--white); border-radius: 16px;
+  padding: 1.6rem 1.8rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  text-decoration: none; color: inherit;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+}
+.news-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+.news-card:focus-visible { outline: 3px solid var(--ocean-light); outline-offset: 3px; }
+.news-meta {
+  font-size: 0.78rem; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600;
+}
+.news-title {
+  font-size: 1.12rem; line-height: 1.35; color: var(--ocean-dark);
+  font-weight: 600;
+}
+.news-sum { font-size: 0.92rem; color: var(--warm-gray); line-height: 1.5; }
+.news-card .news-arrow { margin-top: auto; font-size: 0.85rem; color: var(--ocean); font-weight: 600; }
+.news-foot { text-align: center; margin-top: 2.2rem; font-size: 0.82rem; color: var(--warm-gray); opacity: 0.75; }
+
 #preise { background: var(--sky); }
 
 .preise-card {
@@ -680,6 +708,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       <li><a href="#galerie" data-i18n="nav.galerie">Galerie</a></li>
       <li><a href="#ausstattung" data-i18n="nav.ausstattung">Ausstattung</a></li>
       <li><a href="#lage" data-i18n="nav.lage">Lage</a></li>
+      <li id="navAktuelles"><a href="#aktuelles" data-i18n="nav.aktuelles">Aktuelles</a></li>
       <li><a href="#preise" data-i18n="nav.preise">Preise</a></li>
       <li><a href="#buchen" data-i18n="nav.buchen">Buchen</a></li>
     </ul>
@@ -1018,6 +1047,20 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   </div>
 </section>
 
+<!-- ===== AKTUELLES ===== -->
+<section id="aktuelles" hidden>
+  <div class="section-header fade-in">
+    <h2 data-i18n="news.title">Aktuelles aus der <strong>Probstei</strong></h2>
+    <p data-i18n="news.sub">Veranstaltungen, Neues und Wissenswertes rund um den Schönberger Strand</p>
+  </div>
+
+  <div class="news-grid fade-in" id="newsGrid"></div>
+
+  <p class="news-foot fade-in" id="newsFoot" hidden>
+    <span data-i18n="news.updated">Zuletzt aktualisiert</span>: <time id="newsUpdated"></time>
+  </p>
+</section>
+
 <!-- ===== PREISE ===== -->
 <section id="preise">
   <div class="section-header fade-in">
@@ -1086,6 +1129,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
     <a href="#galerie" data-i18n="nav.galerie">Galerie</a>
     <a href="#ausstattung" data-i18n="nav.ausstattung">Ausstattung</a>
     <a href="#lage" data-i18n="foot.lage">Lage & Anfahrt</a>
+    <a href="#aktuelles" data-i18n="nav.aktuelles">Aktuelles</a>
     <a href="#preise" data-i18n="nav.preise">Preise</a>
     <a href="https://www.ostsee-ferienwohnungen.de/schoenberg-hohenfelde-hohwachter-bucht/schoenberger-strand/quot-casa-baltica-quot-kiefernweg-18-app-4-o26118" target="_blank" rel="noopener" data-i18n="foot.portal">Buchungsportal</a>
     <a href="gaeste-info.html" data-i18n="foot.guestinfo">Gäste-Info</a>
@@ -1115,7 +1159,8 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   // ============================================================
   var T = {
     de: {
-      'nav.galerie':'Galerie','nav.ausstattung':'Ausstattung','nav.lage':'Lage','nav.preise':'Preise','nav.buchen':'Buchen',
+      'nav.galerie':'Galerie','nav.ausstattung':'Ausstattung','nav.lage':'Lage','nav.aktuelles':'Aktuelles','nav.preise':'Preise','nav.buchen':'Buchen',
+      'news.title':'Aktuelles aus der <strong>Probstei</strong>','news.sub':'Veranstaltungen, Neues und Wissenswertes rund um den Schönberger Strand','news.updated':'Zuletzt aktualisiert','news.more':'Mehr lesen',
       'hero.subtitle':'Ferienwohnung am Schönberger Strand — nur 100 m zur Ostsee',
       'hero.badge1':'4 Personen','hero.badge2':'2 Schlafzimmer','hero.badge3':'Terrasse & Garten',
       'hero.cta':'Jetzt anfragen','hero.gallery':'Galerie ansehen','hero.scroll':'Entdecken',
@@ -1157,7 +1202,8 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Lage & Anfahrt','foot.portal':'Buchungsportal','foot.guestinfo':'Gäste-Info','foot.copy':'© 2025 Casa Baltica — Ferienwohnung am Schönberger Strand'
     },
     en: {
-      'nav.galerie':'Gallery','nav.ausstattung':'Amenities','nav.lage':'Location','nav.preise':'Prices','nav.buchen':'Book',
+      'nav.galerie':'Gallery','nav.ausstattung':'Amenities','nav.lage':'Location','nav.aktuelles':'News','nav.preise':'Prices','nav.buchen':'Book',
+      'news.title':'What\'s on in the <strong>Probstei</strong>','news.sub':'Events, news and good-to-know around Schönberger Strand','news.updated':'Last updated','news.more':'Read more',
       'hero.subtitle':'Holiday apartment at Schönberger Strand — just 100 m to the Baltic Sea',
       'hero.badge1':'4 Guests','hero.badge2':'2 Bedrooms','hero.badge3':'Terrace & Garden',
       'hero.cta':'Inquire now','hero.gallery':'View gallery','hero.scroll':'Discover',
@@ -1199,7 +1245,8 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Location & Directions','foot.portal':'Booking portal','foot.guestinfo':'Guest info','foot.copy':'© 2025 Casa Baltica — Holiday apartment at Schönberger Strand'
     },
     es: {
-      'nav.galerie':'Galería','nav.ausstattung':'Equipamiento','nav.lage':'Ubicación','nav.preise':'Precios','nav.buchen':'Reservar',
+      'nav.galerie':'Galería','nav.ausstattung':'Equipamiento','nav.lage':'Ubicación','nav.aktuelles':'Actualidad','nav.preise':'Precios','nav.buchen':'Reservar',
+      'news.title':'Novedades de la <strong>Probstei</strong>','news.sub':'Eventos, novedades y datos útiles en torno a Schönberger Strand','news.updated':'Última actualización','news.more':'Leer más',
       'hero.subtitle':'Apartamento vacacional en Schönberger Strand — a solo 100 m del mar Báltico',
       'hero.badge1':'4 Huéspedes','hero.badge2':'2 Dormitorios','hero.badge3':'Terraza y jardín',
       'hero.cta':'Consultar ahora','hero.gallery':'Ver galería','hero.scroll':'Descubrir',
@@ -1394,6 +1441,77 @@ nav { transition: box-shadow 250ms var(--ease-out); }
 </script>
 
 <!-- GoatCounter Analytics (DSGVO-konform, kein Cookie-Banner nötig) -->
+<!-- ===== AKTUELLES / NEWS LOADER ===== -->
+<script>
+(function(){
+  'use strict';
+  var section = document.getElementById('aktuelles');
+  var grid    = document.getElementById('newsGrid');
+  var navItem = document.getElementById('navAktuelles');
+  var foot    = document.getElementById('newsFoot');
+  if (!section || !grid) return;
+
+  function hide(){
+    section.setAttribute('hidden','');
+    if (navItem) navItem.style.display = 'none';
+  }
+
+  function fmtDate(iso){
+    var lang = document.documentElement.lang || 'de';
+    try {
+      return new Date(iso).toLocaleDateString(lang, { day:'numeric', month:'short', year:'numeric' });
+    } catch(e){ return iso || ''; }
+  }
+
+  fetch('news.json', { cache: 'no-cache' })
+    .then(function(r){ if (!r.ok) throw new Error('no news'); return r.json(); })
+    .then(function(data){
+      var items = (data && Array.isArray(data.items)) ? data.items : [];
+      if (!items.length) { hide(); return; }
+
+      var frag = document.createDocumentFragment();
+      items.slice(0, 4).forEach(function(it){
+        if (!it || !it.title || !it.url) return;
+        var card = document.createElement('a');
+        card.className = 'news-card';
+        card.href = it.url;
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+
+        var meta = document.createElement('div');
+        meta.className = 'news-meta';
+        meta.textContent = (it.source ? it.source + ' \u00b7 ' : '') + fmtDate(it.date);
+        card.appendChild(meta);
+
+        var h3 = document.createElement('h3');
+        h3.className = 'news-title';
+        h3.textContent = it.title;
+        card.appendChild(h3);
+
+        if (it.summary) {
+          var p = document.createElement('p');
+          p.className = 'news-sum';
+          p.textContent = it.summary;
+          card.appendChild(p);
+        }
+        frag.appendChild(card);
+      });
+
+      if (!frag.childNodes.length) { hide(); return; }
+      grid.innerHTML = '';
+      grid.appendChild(frag);
+      section.removeAttribute('hidden');
+
+      if (foot && data.updated) {
+        var t = document.getElementById('newsUpdated');
+        if (t) { t.setAttribute('datetime', data.updated); t.textContent = fmtDate(data.updated); }
+        foot.removeAttribute('hidden');
+      }
+    })
+    .catch(function(){ hide(); });
+})();
+</script>
+
 <script data-goatcounter="https://casa-baltica.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
