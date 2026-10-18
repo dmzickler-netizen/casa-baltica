@@ -1,0 +1,8 @@
+# Hinweis: Bei einer GitHub-Projektseite werten Suchmaschinen nur
+# https://dmzickler-netizen.github.io/robots.txt aus – diese Datei hier
+# (/casa-baltica/robots.txt) ist daher nur Dokumentation. Wirksam für die
+# Gäste-Info ist das <meta name="robots" content="noindex, nofollow"> in der Seite.
+User-agent: *
+Disallow: /casa-baltica/gaeste-info.html
+
+Sitemap: https://dmzickler-netizen.github.io/casa-baltica/sitemap.xml

@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Casa Baltica — Ferienwohnung am Schönberger Strand</title>
 <meta name="description" content="Gemütliche Ferienwohnung 'Casa Baltica' direkt am Schönberger Strand. 2 Schlafzimmer, Terrasse mit Garten, nur 100m zum Ostseestrand. Jetzt buchen!">
+<link rel="canonical" href="https://dmzickler-netizen.github.io/casa-baltica/">
 
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Casa Baltica — Ferienwohnung am Schönberger Strand">
 <meta property="og:description" content="Gemütliche Ferienwohnung direkt an der Ostsee. 2 Schlafzimmer, Terrasse mit Garten, nur 100m zum Strand. WLAN mit Glasfaser.">
-<meta property="og:image" content="img/strand-panorama.jpg">
+<meta property="og:image" content="https://dmzickler-netizen.github.io/casa-baltica/img/strand-panorama.jpg">
 <meta property="og:url" content="https://dmzickler-netizen.github.io/casa-baltica/">
 <meta property="og:locale" content="de_DE">
 <meta property="og:locale:alternate" content="en_US">
@@ -20,7 +21,58 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Casa Baltica — Ferienwohnung am Schönberger Strand">
 <meta name="twitter:description" content="Gemütliche Ferienwohnung direkt an der Ostsee. 2 Schlafzimmer, Terrasse mit Garten, nur 100m zum Strand.">
-<meta name="twitter:image" content="img/strand-panorama.jpg">
+<meta name="twitter:image" content="https://dmzickler-netizen.github.io/casa-baltica/img/strand-panorama.jpg">
+
+<!-- Strukturierte Daten: nur Angaben, die auf dieser Seite belegt sind.
+     TODO: prüfen – maximale Belegung (4 Personen?) fehlt bewusst, bis bestätigt. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VacationRental",
+  "@id": "https://dmzickler-netizen.github.io/casa-baltica/#casa-baltica",
+  "name": "Casa Baltica",
+  "description": "Ferienwohnung im Erdgeschoss mit Terrasse und eigenem Garten in ruhiger zweiter Reihe, 100 m zum Ostseestrand am Schönberger Strand.",
+  "url": "https://dmzickler-netizen.github.io/casa-baltica/",
+  "image": [
+    "https://dmzickler-netizen.github.io/casa-baltica/img/strand-panorama.jpg",
+    "https://dmzickler-netizen.github.io/casa-baltica/img/garten-sonnig.jpg",
+    "https://dmzickler-netizen.github.io/casa-baltica/img/wohnkueche-ueberblick.jpg",
+    "https://dmzickler-netizen.github.io/casa-baltica/img/schlafzimmer-doppelbett.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kiefernweg 18, App. 4",
+    "postalCode": "24217",
+    "addressLocality": "Schönberger Strand",
+    "addressRegion": "Schleswig-Holstein",
+    "addressCountry": "DE"
+  },
+  "checkinTime": "15:00",
+  "checkoutTime": "10:00",
+  "petsAllowed": false,
+  "containsPlace": {
+    "@type": "Accommodation",
+    "additionalType": "EntirePlace",
+    "numberOfBedrooms": 2,
+    "numberOfBathroomsTotal": 1,
+    "floorSize": { "@type": "QuantitativeValue", "value": 50, "unitCode": "MTK" },
+    "bed": [
+      { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "Doppelbett 180×200 cm" },
+      { "@type": "BedDetails", "numberOfBeds": 2, "typeOfBed": "Einzelbett 90×200 cm" }
+    ],
+    "smokingAllowed": false,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "WLAN (Glasfaser)", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Terrasse", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Garten", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Geschirrspüler", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Fernseher", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bettwäsche und Handtücher", "value": true }
+    ]
+  }
+}
+</script>
 
 <style>
 /* ===== RESET & BASE ===== */
