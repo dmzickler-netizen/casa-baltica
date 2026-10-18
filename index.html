@@ -447,6 +447,10 @@ section { padding: 5rem 2rem; }
 .offer-card:hover { transform: none; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
 .news-foot { text-align: center; margin-top: 2.2rem; font-size: 0.82rem; color: var(--warm-gray); opacity: 0.75; }
 
+/* ===== GÄSTESTIMMEN ===== */
+.quote-card { margin: 0; }
+.quote-card blockquote { font-style: italic; color: var(--text); font-size: 1rem; line-height: 1.55; }
+
 #preise { background: var(--sky); }
 
 .preise-card {
@@ -1132,6 +1136,23 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   </p>
 </section>
 
+<!-- ===== GÄSTESTIMMEN ===== -->
+<!-- Platzhalter: bleibt ausgeblendet (hidden), bis echte Zitate mit Quelle vorliegen.
+     Keine Bewertungen erfinden. Zum Freischalten: Zitate eintragen und "hidden" entfernen. -->
+<section id="stimmen" hidden>
+  <div class="section-header fade-in">
+    <h2 data-i18n="rev.title">Das sagen unsere <strong>Gäste</strong></h2>
+  </div>
+  <div class="news-grid fade-in">
+    <!-- Vorlage je Zitat:
+    <figure class="news-card quote-card">
+      <blockquote>„Zitat im Wortlaut …“</blockquote>
+      <figcaption class="news-meta">Vorname · Monat Jahr · Quelle (z. B. Google)</figcaption>
+    </figure>
+    -->
+  </div>
+</section>
+
 <!-- ===== PREISE ===== -->
 <section id="preise">
   <div class="section-header fade-in">
@@ -1231,7 +1252,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   // ============================================================
   var T = {
     de: {
-      'nav.galerie':'Galerie','nav.ausstattung':'Ausstattung','nav.lage':'Lage','nav.urlaub':'Urlaub & Umgebung','nav.aktuelles':'Aktuelles & Angebote','offers.title':'Last-Minute & Saisonhinweise','nav.preise':'Preise','nav.buchen':'Buchen',
+      'nav.galerie':'Galerie','nav.ausstattung':'Ausstattung','nav.lage':'Lage','nav.urlaub':'Urlaub & Umgebung','nav.aktuelles':'Aktuelles & Angebote','offers.title':'Last-Minute & Saisonhinweise','rev.title':'Das sagen unsere <strong>Gäste</strong>','nav.preise':'Preise','nav.buchen':'Buchen',
       'news.title':'Aktuelles aus der <strong>Probstei</strong>','news.sub':'Veranstaltungen, Neues und Wissenswertes rund um den Schönberger Strand','news.updated':'Zuletzt aktualisiert','news.more':'Mehr lesen',
       'hero.subtitle':'Ferienwohnung am Schönberger Strand — nur 100 m zur Ostsee',
       'hero.badge1':'4 Personen','hero.badge2':'2 Schlafzimmer','hero.badge3':'Terrasse & Garten',
@@ -1274,7 +1295,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Lage & Anfahrt','foot.portal':'Direkt buchen','foot.guestinfo':'Gäste-Info','foot.copy':'© 2025 Casa Baltica — Ferienwohnung am Schönberger Strand'
     },
     en: {
-      'nav.galerie':'Gallery','nav.ausstattung':'Amenities','nav.lage':'Location','nav.urlaub':'Holiday & area (DE)','nav.aktuelles':'News & offers','offers.title':'Last-minute & seasonal notes','nav.preise':'Prices','nav.buchen':'Book',
+      'nav.galerie':'Gallery','nav.ausstattung':'Amenities','nav.lage':'Location','nav.urlaub':'Holiday & area (DE)','nav.aktuelles':'News & offers','offers.title':'Last-minute & seasonal notes','rev.title':'What our <strong>guests</strong> say','nav.preise':'Prices','nav.buchen':'Book',
       'news.title':'What\'s on in the <strong>Probstei</strong>','news.sub':'Events, news and good-to-know around Schönberger Strand','news.updated':'Last updated','news.more':'Read more',
       'hero.subtitle':'Holiday apartment at Schönberger Strand — just 100 m to the Baltic Sea',
       'hero.badge1':'4 Guests','hero.badge2':'2 Bedrooms','hero.badge3':'Terrace & Garden',
@@ -1317,7 +1338,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Location & Directions','foot.portal':'Book direct','foot.guestinfo':'Guest info','foot.copy':'© 2025 Casa Baltica — Holiday apartment at Schönberger Strand'
     },
     es: {
-      'nav.galerie':'Galería','nav.ausstattung':'Equipamiento','nav.lage':'Ubicación','nav.urlaub':'Vacaciones y entorno (DE)','nav.aktuelles':'Actualidad y ofertas','offers.title':'Última hora y avisos de temporada','nav.preise':'Precios','nav.buchen':'Reservar',
+      'nav.galerie':'Galería','nav.ausstattung':'Equipamiento','nav.lage':'Ubicación','nav.urlaub':'Vacaciones y entorno (DE)','nav.aktuelles':'Actualidad y ofertas','offers.title':'Última hora y avisos de temporada','rev.title':'Lo que dicen nuestros <strong>huéspedes</strong>','nav.preise':'Precios','nav.buchen':'Reservar',
       'news.title':'Novedades de la <strong>Probstei</strong>','news.sub':'Eventos, novedades y datos útiles en torno a Schönberger Strand','news.updated':'Última actualización','news.more':'Leer más',
       'hero.subtitle':'Apartamento vacacional en Schönberger Strand — a solo 100 m del mar Báltico',
       'hero.badge1':'4 Huéspedes','hero.badge2':'2 Dormitorios','hero.badge3':'Terraza y jardín',
