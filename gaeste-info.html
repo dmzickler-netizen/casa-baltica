@@ -379,6 +379,22 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   .activity-card, .btn, .quicknav a, .lang-btn, .nav-back { transition: none; }
   .activity-card:active, .btn:active, .lang-btn:active, .quicknav a:active, .nav-back:active { transform: none; }
 }
+
+/* ===== KARTE ERST NACH KLICK (Datenschutz) ===== */
+.map-consent {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.8rem; text-align: center;
+  padding: 1.5rem; background: linear-gradient(135deg, var(--sky), var(--sand));
+  color: var(--ocean-dark);
+}
+.map-consent .mc-pin { font-size: 2.2rem; line-height: 1; }
+.map-consent p { font-size: 0.88rem; color: var(--warm-gray); max-width: 380px; margin: 0; }
+.map-consent a { color: var(--ocean); font-weight: 600; }
+.map-consent button {
+  font: inherit; font-weight: 600; cursor: pointer; border: none;
+  background: var(--ocean); color: var(--white); padding: 0.75rem 1.6rem; border-radius: 50px;
+}
+.map-consent button:hover { background: var(--ocean-light); }
 </style>
 </head>
 <body>
@@ -438,12 +454,12 @@ nav { transition: box-shadow 250ms var(--ease-out); }
     </div>
 
     <div class="map-box">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.8!2d10.383!3d54.415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2582c38d8e8d1%3A0x4218e79e3c44e0!2sKiefernweg%2018%2C%2024217%20Sch%C3%B6nberg!5e0!3m2!1sde!2sde!4v1700000000000"
-        allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Standort Casa Baltica">
-      </iframe>
+      <div class="map-consent" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.8!2d10.383!3d54.415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2582c38d8e8d1%3A0x4218e79e3c44e0!2sKiefernweg%2018%2C%2024217%20Sch%C3%B6nberg!5e0!3m2!1sde!2sde!4v1700000000000">
+        <div class="mc-pin" aria-hidden="true">📍</div>
+        <p data-i18n="map.note">Beim Laden der Karte werden Daten an Google übertragen. Mehr dazu in der <a href="datenschutz.html#google-maps">Datenschutzerklärung</a>.</p>
+        <button type="button" data-i18n="map.load">Karte laden</button>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Kiefernweg+18,+24217+Sch%C3%B6nberg" target="_blank" rel="noopener" data-i18n="map.open">In Google Maps öffnen</a>
+      </div>
     </div>
 
     <div class="btn-row">
@@ -882,6 +898,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
 <!-- ===== FOOTER ===== -->
 <footer>
   <p><a href="index.html" data-i18n="ft.back">← Zurück zur Startseite</a></p>
+  <p style="margin-top:0.6rem;"><a href="impressum.html" data-i18n="foot.impressum">Impressum</a> · <a href="datenschutz.html" data-i18n="foot.datenschutz">Datenschutz</a></p>
   <p style="margin-top:0.8rem;">&copy; 2025 Casa Baltica — <span data-i18n="ft.tag">Ferienwohnung am Schönberger Strand</span></p>
   <p style="margin-top:0.4rem; font-size:0.8rem; opacity:0.5;">Kiefernweg 18, App. 4 · 24217 Schönberger Strand · Schleswig-Holstein</p>
 </footer>
@@ -895,6 +912,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   // ============================================================
   var T = {
     de: {
+      'map.note':'Beim Laden der Karte werden Daten an Google übertragen. Mehr dazu in der <a href="datenschutz.html#google-maps">Datenschutzerklärung</a>.','map.load':'Karte laden','map.open':'In Google Maps öffnen','foot.impressum':'Impressum','foot.datenschutz':'Datenschutz',
       'ref.fam.h':'Spielplätze, Minigolf, Hansa-Park & mehr','ref.fam.p':'Unsere Familientipps für die Umgebung – Spielplätze, Spielmobil, Boule, Tennis, Minigolf, Hansa-Park und Filippos Erlebnisgarten – finden Sie gesammelt auf unserer Seite „Urlaub am Schönberger Strand“.','ref.fam.btn':'👨‍👩‍👧‍👦 Zu den Familientipps','ref.st.h':'Strandkorb, Beachvolleyball & Surfschule','ref.st.p':'Strandkorb-Reservierung (App BeachNow), Beachvolleyball- und -fußballfelder sowie die Surfschule finden Sie auf unserer Seite „Urlaub am Schönberger Strand“.','ref.st.btn':'🏖️ Zu den Strandtipps','ref.au.h':'Ausflüge, Essen gehen & Veranstaltungen','ref.au.p':'Bauernhof Heuer, Museumsbahn, Kindheitsmuseum, Kiel, Altes Probsteier Café, Restaurant-Empfehlungen, Radtouren und den Veranstaltungskalender haben wir auf unserer Seite „Urlaub am Schönberger Strand“ zusammengestellt.','ref.au.btn':'🎡 Zu den Ausflugstipps','ref.va.btn':'📅 Veranstaltungen',
       'nav.back':'Zur Startseite',
       'hero.title':'Herzlich willkommen in der <strong>Casa Baltica</strong>',
@@ -984,6 +1002,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'ft.back':'← Zurück zur Startseite','ft.tag':'Ferienwohnung am Schönberger Strand'
     },
     en: {
+      'map.note':'Loading the map transfers data to Google. Details in our <a href="datenschutz.html#google-maps">privacy policy</a> (German).','map.load':'Load map','map.open':'Open in Google Maps','foot.impressum':'Legal notice','foot.datenschutz':'Privacy',
       'ref.fam.h':'Playgrounds, mini-golf, Hansa-Park & more','ref.fam.p':'Our family tips for the area – playgrounds, Spielmobil, boules, tennis, mini-golf, Hansa-Park and Filippos Erlebnisgarten – are collected on our page “Holidays at Schönberger Strand” (in German).','ref.fam.btn':'👨‍👩‍👧‍👦 Family tips','ref.st.h':'Beach chairs, beach volleyball & surf school','ref.st.p':'Beach-chair booking (BeachNow app), the beach volleyball and football courts and the surf school are on our page “Holidays at Schönberger Strand” (in German).','ref.st.btn':'🏖️ Beach tips','ref.au.h':'Day trips, eating out & events','ref.au.p':'Bauernhof Heuer, the museum railway, the Museum of Childhood, Kiel, Altes Probsteier Café, restaurant tips, cycling and the events calendar are collected on our page “Holidays at Schönberger Strand” (in German).','ref.au.btn':'🎡 Day-trip ideas','ref.va.btn':'📅 Events',
       'nav.back':'Back to home',
       'hero.title':'Welcome to <strong>Casa Baltica</strong>',
@@ -1073,6 +1092,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'ft.back':'← Back to home','ft.tag':'Holiday apartment at Schönberger Strand'
     },
     es: {
+      'map.note':'Al cargar el mapa se transmiten datos a Google. Más información en nuestra <a href="datenschutz.html#google-maps">política de privacidad</a> (en alemán).','map.load':'Cargar mapa','map.open':'Abrir en Google Maps','foot.impressum':'Aviso legal','foot.datenschutz':'Privacidad',
       'ref.fam.h':'Parques infantiles, minigolf, Hansa-Park y más','ref.fam.p':'Nuestros consejos para familias – parques infantiles, Spielmobil, petanca, tenis, minigolf, Hansa-Park y Filippos Erlebnisgarten – están reunidos en nuestra página «Vacaciones en Schönberger Strand» (en alemán).','ref.fam.btn':'👨‍👩‍👧‍👦 Consejos para familias','ref.st.h':'Sillas de playa, vóley playa y escuela de surf','ref.st.p':'La reserva de sillas de playa (app BeachNow), las canchas de vóley y fútbol playa y la escuela de surf están en nuestra página «Vacaciones en Schönberger Strand» (en alemán).','ref.st.btn':'🏖️ Consejos de playa','ref.au.h':'Excursiones, restaurantes y eventos','ref.au.p':'Bauernhof Heuer, el tren-museo, el Museo de la Infancia, Kiel, el Altes Probsteier Café, restaurantes, rutas en bici y el calendario de eventos están en nuestra página «Vacaciones en Schönberger Strand» (en alemán).','ref.au.btn':'🎡 Ideas de excursión','ref.va.btn':'📅 Eventos',
       'nav.back':'A la página de inicio',
       'hero.title':'Bienvenidos a la <strong>Casa Baltica</strong>',
@@ -1229,6 +1249,25 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       var grid = document.getElementById('weatherGrid');
       if (grid) grid.innerHTML = '<p class="weather-note">' + (T[currentLang]['we.error'] || 'Wetterdaten sind derzeit nicht verfügbar.') + '</p>';
     });
+})();
+</script>
+
+<!-- ===== KARTE ERST NACH KLICK LADEN ===== -->
+<script>
+(function(){
+  'use strict';
+  document.querySelectorAll('.map-consent').forEach(function(box){
+    var btn = box.querySelector('button');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-src');
+      f.title = 'Standort Casa Baltica';
+      f.setAttribute('allowfullscreen', '');
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      box.replaceWith(f);
+    });
+  });
 })();
 </script>
 

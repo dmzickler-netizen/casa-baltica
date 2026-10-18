@@ -788,6 +788,22 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   .lightbox img { transition: opacity 200ms ease; transform: none; }
   .lightbox.open img { transform: none; }
 }
+
+/* ===== KARTE ERST NACH KLICK (Datenschutz) ===== */
+.map-consent {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.8rem; text-align: center;
+  padding: 1.5rem; background: linear-gradient(135deg, var(--sky), var(--sand));
+  color: var(--ocean-dark);
+}
+.map-consent .mc-pin { font-size: 2.2rem; line-height: 1; }
+.map-consent p { font-size: 0.88rem; color: var(--warm-gray); max-width: 380px; margin: 0; }
+.map-consent a { color: var(--ocean); font-weight: 600; }
+.map-consent button {
+  font: inherit; font-weight: 600; cursor: pointer; border: none;
+  background: var(--ocean); color: var(--white); padding: 0.75rem 1.6rem; border-radius: 50px;
+}
+.map-consent button:hover { background: var(--ocean-light); }
 </style>
 </head>
 <body>
@@ -1100,12 +1116,12 @@ nav { transition: box-shadow 250ms var(--ease-out); }
 
   <div class="lage-grid fade-in">
     <div class="lage-map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.8!2d10.383!3d54.415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2582c38d8e8d1%3A0x4218e79e3c44e0!2sKiefernweg%2018%2C%2024217%20Sch%C3%B6nberg!5e0!3m2!1sde!2sde!4v1700000000000"
-        allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Standort Casa Baltica">
-      </iframe>
+      <div class="map-consent" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.8!2d10.383!3d54.415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2582c38d8e8d1%3A0x4218e79e3c44e0!2sKiefernweg%2018%2C%2024217%20Sch%C3%B6nberg!5e0!3m2!1sde!2sde!4v1700000000000">
+        <div class="mc-pin" aria-hidden="true">📍</div>
+        <p data-i18n="map.note">Beim Laden der Karte werden Daten an Google übertragen. Mehr dazu in der <a href="datenschutz.html#google-maps">Datenschutzerklärung</a>.</p>
+        <button type="button" data-i18n="map.load">Karte laden</button>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Kiefernweg+18,+24217+Sch%C3%B6nberg" target="_blank" rel="noopener" data-i18n="map.open">In Google Maps öffnen</a>
+      </div>
     </div>
 
     <div class="lage-info">
@@ -1272,6 +1288,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
     <p class="inq-error" id="inqError" role="alert" hidden data-i18n="inq.err">Die Abreise muss nach der Anreise liegen.</p>
     <button type="submit" class="btn-cta btn-cta-primary" data-i18n="inq.send">✉️ Anfrage per E-Mail senden</button>
     <p class="inq-note" data-i18n="inq.privacy">Datenschutz: Beim Absenden öffnet sich Ihr eigenes E-Mail-Programm mit einer vorbereiteten Nachricht. Über diese Webseite werden dabei keine Daten übertragen oder gespeichert; Ihre Angaben nutzen wir nur zur Beantwortung Ihrer Anfrage.</p>
+    <p class="inq-note"><a href="datenschutz.html#anfrage" style="color:inherit;" data-i18n="foot.datenschutz">Datenschutz</a></p>
     <noscript><p class="inq-note">E-Mail: maripilizickler (at) gmail.com</p></noscript>
   </form>
 </section>
@@ -1287,6 +1304,8 @@ nav { transition: box-shadow 250ms var(--ease-out); }
     <a href="#preise" data-i18n="nav.preise">Preise</a>
     <a href="https://www.schoenberg.de/unterkuenfte#!m/3/object/297302" target="_blank" rel="noopener" data-i18n="foot.portal">Direkt buchen</a>
     <a href="gaeste-info.html" data-i18n="foot.guestinfo">Gäste-Info</a>
+    <a href="impressum.html" data-i18n="foot.impressum">Impressum</a>
+    <a href="datenschutz.html" data-i18n="foot.datenschutz">Datenschutz</a>
   </div>
   <div class="footer-social">
     <a href="https://instagram.com/casabaltica.schoenberg" target="_blank" rel="noopener" class="social-ig" aria-label="Instagram" title="Instagram">
@@ -1313,6 +1332,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   // ============================================================
   var T = {
     de: {
+      'map.note':'Beim Laden der Karte werden Daten an Google übertragen. Mehr dazu in der <a href="datenschutz.html#google-maps">Datenschutzerklärung</a>.','map.load':'Karte laden','map.open':'In Google Maps öffnen','foot.impressum':'Impressum','foot.datenschutz':'Datenschutz',
       'nav.galerie':'Galerie','nav.ausstattung':'Ausstattung','nav.lage':'Lage','nav.urlaub':'Urlaub & Umgebung','nav.aktuelles':'Aktuelles','foot.aktuelles':'Aktuelles & Angebote','nav.umgebung':'Umgebung','offers.title':'Last-Minute & Saisonhinweise','rev.title':'Das sagen unsere <strong>Gäste</strong>','inq.title':'Frage zu Ihrem Wunschtermin?','inq.lead':'Schreiben Sie uns direkt – wir melden uns per E-Mail. Die verbindliche Buchung läuft über die Tourist-Info.','inq.from':'Anreise','inq.to':'Abreise','inq.guests':'Personen','inq.name':'Ihr Name','inq.msg':'Nachricht','inq.err':'Die Abreise muss nach der Anreise liegen.','inq.send':'✉️ Anfrage per E-Mail senden','inq.privacy':'Datenschutz: Beim Absenden öffnet sich Ihr eigenes E-Mail-Programm mit einer vorbereiteten Nachricht. Über diese Webseite werden dabei keine Daten übertragen oder gespeichert; Ihre Angaben nutzen wir nur zur Beantwortung Ihrer Anfrage.','nav.preise':'Preise','nav.buchen':'Buchen',
       'news.title':'Aktuelles aus der <strong>Probstei</strong>','news.sub':'Veranstaltungen, Neues und Wissenswertes rund um den Schönberger Strand','news.updated':'Zuletzt aktualisiert','news.more':'Mehr lesen',
       'hero.subtitle':'Ferienwohnung am Schönberger Strand — nur 100 m zur Ostsee',
@@ -1356,6 +1376,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Lage & Anfahrt','foot.portal':'Direkt buchen','foot.guestinfo':'Gäste-Info','foot.copy':'© 2025 Casa Baltica — Ferienwohnung am Schönberger Strand'
     },
     en: {
+      'map.note':'Loading the map transfers data to Google. Details in our <a href="datenschutz.html#google-maps">privacy policy</a> (German).','map.load':'Load map','map.open':'Open in Google Maps','foot.impressum':'Legal notice','foot.datenschutz':'Privacy',
       'nav.galerie':'Gallery','nav.ausstattung':'Amenities','nav.lage':'Location','nav.urlaub':'Holiday & area (DE)','nav.aktuelles':'News','foot.aktuelles':'News & offers','nav.umgebung':'Area (DE)','offers.title':'Last-minute & seasonal notes','rev.title':'What our <strong>guests</strong> say','inq.title':'A question about your dates?','inq.lead':'Write to us directly – we will reply by e-mail. Binding bookings are made via the Tourist Info.','inq.from':'Arrival','inq.to':'Departure','inq.guests':'Guests','inq.name':'Your name','inq.msg':'Message','inq.err':'Departure must be after arrival.','inq.send':'✉️ Send enquiry by e-mail','inq.privacy':'Privacy: submitting opens your own e-mail program with a prepared message. No data is transmitted or stored by this website; we only use your details to answer your enquiry.','nav.preise':'Prices','nav.buchen':'Book',
       'news.title':'What\'s on in the <strong>Probstei</strong>','news.sub':'Events, news and good-to-know around Schönberger Strand','news.updated':'Last updated','news.more':'Read more',
       'hero.subtitle':'Holiday apartment at Schönberger Strand — just 100 m to the Baltic Sea',
@@ -1399,6 +1420,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Location & Directions','foot.portal':'Book direct','foot.guestinfo':'Guest info','foot.copy':'© 2025 Casa Baltica — Holiday apartment at Schönberger Strand'
     },
     es: {
+      'map.note':'Al cargar el mapa se transmiten datos a Google. Más información en nuestra <a href="datenschutz.html#google-maps">política de privacidad</a> (en alemán).','map.load':'Cargar mapa','map.open':'Abrir en Google Maps','foot.impressum':'Aviso legal','foot.datenschutz':'Privacidad',
       'nav.galerie':'Galería','nav.ausstattung':'Equipamiento','nav.lage':'Ubicación','nav.urlaub':'Vacaciones y entorno (DE)','nav.aktuelles':'Actualidad','foot.aktuelles':'Actualidad y ofertas','nav.umgebung':'Entorno (DE)','offers.title':'Última hora y avisos de temporada','rev.title':'Lo que dicen nuestros <strong>huéspedes</strong>','inq.title':'¿Una pregunta sobre sus fechas?','inq.lead':'Escríbanos directamente – le responderemos por correo. La reserva vinculante se realiza a través de la oficina de turismo.','inq.from':'Llegada','inq.to':'Salida','inq.guests':'Personas','inq.name':'Su nombre','inq.msg':'Mensaje','inq.err':'La salida debe ser posterior a la llegada.','inq.send':'✉️ Enviar consulta por correo','inq.privacy':'Privacidad: al enviar se abre su propio programa de correo con un mensaje preparado. Esta web no transmite ni guarda ningún dato; solo usamos sus datos para responder a su consulta.','nav.preise':'Precios','nav.buchen':'Reservar',
       'news.title':'Novedades de la <strong>Probstei</strong>','news.sub':'Eventos, novedades y datos útiles en torno a Schönberger Strand','news.updated':'Última actualización','news.more':'Leer más',
       'hero.subtitle':'Apartamento vacacional en Schönberger Strand — a solo 100 m del mar Báltico',
@@ -1707,6 +1729,25 @@ nav { transition: box-shadow 250ms var(--ease-out); }
     var hasNews = renderNews(res[1]);
     if (!hasOffers && !hasNews) { hide(); return; }
     section.removeAttribute('hidden');
+  });
+})();
+</script>
+
+<!-- ===== KARTE ERST NACH KLICK LADEN ===== -->
+<script>
+(function(){
+  'use strict';
+  document.querySelectorAll('.map-consent').forEach(function(box){
+    var btn = box.querySelector('button');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-src');
+      f.title = 'Standort Casa Baltica';
+      f.setAttribute('allowfullscreen', '');
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      box.replaceWith(f);
+    });
   });
 })();
 </script>
