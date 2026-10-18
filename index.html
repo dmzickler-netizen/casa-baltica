@@ -452,6 +452,11 @@ section { padding: 5rem 2rem; }
 /* ===== GÄSTESTIMMEN ===== */
 .quote-card { margin: 0; }
 .quote-card blockquote { font-style: italic; color: var(--text); font-size: 1rem; line-height: 1.55; }
+.rev-stars { color: var(--accent); letter-spacing: 0.1em; font-size: 1.05rem; }
+.rev-reply { font-size: 0.88rem; color: var(--warm-gray); border-top: 1px solid var(--sand-dark); padding-top: 0.7rem; margin-top: 0.3rem; }
+#stimmen .news-grid { align-items: start; }
+.rev-source { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--warm-gray); }
+.rev-source a { color: var(--ocean); font-weight: 600; }
 
 #preise { background: var(--sky); }
 
@@ -1180,20 +1185,30 @@ nav { transition: box-shadow 250ms var(--ease-out); }
 </section>
 
 <!-- ===== GÄSTESTIMMEN ===== -->
-<!-- Platzhalter: bleibt ausgeblendet (hidden), bis echte Zitate mit Quelle vorliegen.
-     Keine Bewertungen erfinden. Zum Freischalten: Zitate eintragen und "hidden" entfernen. -->
-<section id="stimmen" hidden>
+<!-- Echte Bewertungen von schoenberg.de (Objekt 297302), im Wortlaut übernommen – nichts kürzen oder umformulieren.
+     Neue Bewertungen nach demselben Muster ergänzen und die Zusammenfassung (Anzahl, Schnitt) anpassen. -->
+<section id="stimmen">
   <div class="section-header fade-in">
     <h2 data-i18n="rev.title">Das sagen unsere <strong>Gäste</strong></h2>
+    <p><span class="rev-stars" aria-hidden="true">★★★★★</span> <strong>5 / 5</strong> · <span data-i18n="rev.summary">2 Bewertungen · 100 % Weiterempfehlung</span></p>
   </div>
   <div class="news-grid fade-in">
-    <!-- Vorlage je Zitat:
     <figure class="news-card quote-card">
-      <blockquote>„Zitat im Wortlaut …“</blockquote>
-      <figcaption class="news-meta">Vorname · Monat Jahr · Quelle (z. B. Google)</figcaption>
+      <div class="rev-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div>
+      <blockquote>„Uneingeschränkte Empfehlung 👍“</blockquote>
+      <figcaption class="news-meta">Stefanie K. · 15.08.2026 · <span data-i18n="rev.verified">Verifizierte Buchung</span></figcaption>
     </figure>
-    -->
+    <figure class="news-card quote-card">
+      <div class="rev-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div>
+      <blockquote>„Die Wohnung war sehr schön,wir hatten schon einmal eine Wohnung von den Vermietern.<br>
+      Leider ist die Wegbeschreibung zur Wohnung nicht optimal,kommt man vom Golfplatz in den Kiefernweg,muss man unter der Schranke durch laufen.<br>
+      Kommt man von der Promenade fehlt leider ein Strassenschild das es der Kiefernweg ist,und man links abbiegen muss.Leider hat uns die Dame von der Touristeninformation falsch geschickt,so das wir 1 Stunde gesucht haben.Wir kamen mit der Bahn/Bus.<br>
+      Sonst immer wieder sehr gerne“</blockquote>
+      <figcaption class="news-meta">Silvia B. · 30.06.2026 · <span data-i18n="rev.verified">Verifizierte Buchung</span></figcaption>
+      <p class="rev-reply" data-i18n="rev.reply">Unsere Antwort: Danke für den Hinweis – die Wegbeschreibung haben wir inzwischen überarbeitet.</p>
+    </figure>
   </div>
+  <p class="rev-source fade-in"><span data-i18n="rev.source">Bewertungen von Gästen mit verifizierter Buchung, im Wortlaut übernommen von</span> <a href="https://www.schoenberg.de/unterkuenfte#!m/3/object/297302" target="_blank" rel="noopener">schoenberg.de</a></p>
 </section>
 
 <!-- ===== PREISE ===== -->
@@ -1333,6 +1348,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
   // ============================================================
   var T = {
     de: {
+      'rev.summary':'2 Bewertungen · 100 % Weiterempfehlung','rev.verified':'Verifizierte Buchung','rev.reply':'Unsere Antwort: Danke für den Hinweis – die Wegbeschreibung haben wir inzwischen überarbeitet.','rev.source':'Bewertungen von Gästen mit verifizierter Buchung, im Wortlaut übernommen von',
       'map.note':'Beim Laden der Karte werden Daten an Google übertragen. Mehr dazu in der <a href="datenschutz.html#google-maps">Datenschutzerklärung</a>.','map.load':'Karte laden','map.open':'In Google Maps öffnen','foot.impressum':'Impressum','foot.datenschutz':'Datenschutz',
       'nav.galerie':'Galerie','nav.ausstattung':'Ausstattung','nav.lage':'Lage','nav.urlaub':'Urlaub & Umgebung','nav.aktuelles':'Aktuelles','foot.aktuelles':'Aktuelles & Angebote','nav.umgebung':'Umgebung','offers.title':'Last-Minute & Saisonhinweise','rev.title':'Das sagen unsere <strong>Gäste</strong>','inq.title':'Frage zu Ihrem Wunschtermin?','inq.lead':'Schreiben Sie uns direkt – wir melden uns per E-Mail. Die verbindliche Buchung läuft über die Tourist-Info.','inq.from':'Anreise','inq.to':'Abreise','inq.guests':'Personen','inq.name':'Ihr Name','inq.msg':'Nachricht','inq.err':'Die Abreise muss nach der Anreise liegen.','inq.send':'✉️ Anfrage per E-Mail senden','inq.privacy':'Datenschutz: Beim Absenden öffnet sich Ihr eigenes E-Mail-Programm mit einer vorbereiteten Nachricht. Über diese Webseite werden dabei keine Daten übertragen oder gespeichert; Ihre Angaben nutzen wir nur zur Beantwortung Ihrer Anfrage.','nav.preise':'Preise','nav.buchen':'Buchen',
       'news.title':'Aktuelles aus der <strong>Probstei</strong>','news.sub':'Veranstaltungen, Neues und Wissenswertes rund um den Schönberger Strand','news.updated':'Zuletzt aktualisiert','news.more':'Mehr lesen',
@@ -1377,6 +1393,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Lage & Anfahrt','foot.portal':'Direkt buchen','foot.guestinfo':'Gäste-Info','foot.copy':'© 2025 Casa Baltica — Ferienwohnung am Schönberger Strand'
     },
     en: {
+      'rev.summary':'2 reviews · 100 % would recommend','rev.verified':'Verified booking','rev.reply':'Our reply: thank you for the feedback – we have since revised the directions.','rev.source':'Reviews from guests with verified bookings, quoted verbatim (in German) from',
       'map.note':'Loading the map transfers data to Google. Details in our <a href="datenschutz.html#google-maps">privacy policy</a> (German).','map.load':'Load map','map.open':'Open in Google Maps','foot.impressum':'Legal notice','foot.datenschutz':'Privacy',
       'nav.galerie':'Gallery','nav.ausstattung':'Amenities','nav.lage':'Location','nav.urlaub':'Holiday & area (DE)','nav.aktuelles':'News','foot.aktuelles':'News & offers','nav.umgebung':'Area (DE)','offers.title':'Last-minute & seasonal notes','rev.title':'What our <strong>guests</strong> say','inq.title':'A question about your dates?','inq.lead':'Write to us directly – we will reply by e-mail. Binding bookings are made via the Tourist Info.','inq.from':'Arrival','inq.to':'Departure','inq.guests':'Guests','inq.name':'Your name','inq.msg':'Message','inq.err':'Departure must be after arrival.','inq.send':'✉️ Send enquiry by e-mail','inq.privacy':'Privacy: submitting opens your own e-mail program with a prepared message. No data is transmitted or stored by this website; we only use your details to answer your enquiry.','nav.preise':'Prices','nav.buchen':'Book',
       'news.title':'What\'s on in the <strong>Probstei</strong>','news.sub':'Events, news and good-to-know around Schönberger Strand','news.updated':'Last updated','news.more':'Read more',
@@ -1421,6 +1438,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'foot.lage':'Location & Directions','foot.portal':'Book direct','foot.guestinfo':'Guest info','foot.copy':'© 2025 Casa Baltica — Holiday apartment at Schönberger Strand'
     },
     es: {
+      'rev.summary':'2 opiniones · 100 % lo recomienda','rev.verified':'Reserva verificada','rev.reply':'Nuestra respuesta: gracias por el comentario – ya hemos mejorado la descripción del camino.','rev.source':'Opiniones de huéspedes con reserva verificada, citadas literalmente (en alemán) de',
       'map.note':'Al cargar el mapa se transmiten datos a Google. Más información en nuestra <a href="datenschutz.html#google-maps">política de privacidad</a> (en alemán).','map.load':'Cargar mapa','map.open':'Abrir en Google Maps','foot.impressum':'Aviso legal','foot.datenschutz':'Privacidad',
       'nav.galerie':'Galería','nav.ausstattung':'Equipamiento','nav.lage':'Ubicación','nav.urlaub':'Vacaciones y entorno (DE)','nav.aktuelles':'Actualidad','foot.aktuelles':'Actualidad y ofertas','nav.umgebung':'Entorno (DE)','offers.title':'Última hora y avisos de temporada','rev.title':'Lo que dicen nuestros <strong>huéspedes</strong>','inq.title':'¿Una pregunta sobre sus fechas?','inq.lead':'Escríbanos directamente – le responderemos por correo. La reserva vinculante se realiza a través de la oficina de turismo.','inq.from':'Llegada','inq.to':'Salida','inq.guests':'Personas','inq.name':'Su nombre','inq.msg':'Mensaje','inq.err':'La salida debe ser posterior a la llegada.','inq.send':'✉️ Enviar consulta por correo','inq.privacy':'Privacidad: al enviar se abre su propio programa de correo con un mensaje preparado. Esta web no transmite ni guarda ningún dato; solo usamos sus datos para responder a su consulta.','nav.preise':'Precios','nav.buchen':'Reservar',
       'news.title':'Novedades de la <strong>Probstei</strong>','news.sub':'Eventos, novedades y datos útiles en torno a Schönberger Strand','news.updated':'Última actualización','news.more':'Leer más',
