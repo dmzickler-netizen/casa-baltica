@@ -1,0 +1,5 @@
+{
+  "updated": "2026-10-18",
+  "hinweis": "Last-Minute-Termine und Saisonhinweise. Leere Liste = Block auf der Startseite bleibt ausgeblendet. Format je Eintrag: {\"titel\": \"...\", \"zeitraum\": \"...\", \"text\": \"...\"}",
+  "items": []
+}
