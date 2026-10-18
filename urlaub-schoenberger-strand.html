@@ -22,15 +22,112 @@
 <meta name="twitter:description" content="Strand, Familienspaß und Ausflugstipps rund um den Schönberger Strand – mit der Ferienwohnung Casa Baltica.">
 <meta name="twitter:image" content="https://dmzickler-netizen.github.io/casa-baltica/img/strand-panorama.jpg">
 
+<!-- Strukturierte Daten: identisch mit der Startseite, nur belegte Angaben.
+     TODO: prüfen – maximale Belegung (4 Personen?) fehlt bewusst, bis bestätigt. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Urlaub am Schönberger Strand",
-  "url": "https://dmzickler-netizen.github.io/casa-baltica/urlaub-schoenberger-strand.html",
-  "inLanguage": "de",
-  "about": { "@id": "https://dmzickler-netizen.github.io/casa-baltica/#casa-baltica" },
-  "isPartOf": { "@type": "WebSite", "name": "Casa Baltica", "url": "https://dmzickler-netizen.github.io/casa-baltica/" }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Urlaub am Schönberger Strand",
+      "url": "https://dmzickler-netizen.github.io/casa-baltica/urlaub-schoenberger-strand.html",
+      "inLanguage": "de",
+      "about": {
+        "@id": "https://dmzickler-netizen.github.io/casa-baltica/#casa-baltica"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Casa Baltica",
+        "url": "https://dmzickler-netizen.github.io/casa-baltica/"
+      }
+    },
+    {
+      "@type": "VacationRental",
+      "@id": "https://dmzickler-netizen.github.io/casa-baltica/#casa-baltica",
+      "name": "Casa Baltica",
+      "description": "Ferienwohnung im Erdgeschoss mit Terrasse und eigenem Garten in ruhiger zweiter Reihe, 100 m zum Ostseestrand am Schönberger Strand.",
+      "url": "https://dmzickler-netizen.github.io/casa-baltica/",
+      "image": [
+        "https://dmzickler-netizen.github.io/casa-baltica/img/strand-panorama.jpg",
+        "https://dmzickler-netizen.github.io/casa-baltica/img/garten-sonnig.jpg",
+        "https://dmzickler-netizen.github.io/casa-baltica/img/wohnkueche-ueberblick.jpg",
+        "https://dmzickler-netizen.github.io/casa-baltica/img/schlafzimmer-doppelbett.jpg"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kiefernweg 18, App. 4",
+        "postalCode": "24217",
+        "addressLocality": "Schönberger Strand",
+        "addressRegion": "Schleswig-Holstein",
+        "addressCountry": "DE"
+      },
+      "checkinTime": "15:00",
+      "checkoutTime": "10:00",
+      "petsAllowed": false,
+      "containsPlace": {
+        "@type": "Accommodation",
+        "additionalType": "EntirePlace",
+        "numberOfBedrooms": 2,
+        "numberOfBathroomsTotal": 1,
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 50,
+          "unitCode": "MTK"
+        },
+        "bed": [
+          {
+            "@type": "BedDetails",
+            "numberOfBeds": 1,
+            "typeOfBed": "Doppelbett 180×200 cm"
+          },
+          {
+            "@type": "BedDetails",
+            "numberOfBeds": 2,
+            "typeOfBed": "Einzelbett 90×200 cm"
+          }
+        ],
+        "smokingAllowed": false,
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "WLAN (Glasfaser)",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Terrasse",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Garten",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Kostenloser Parkplatz",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Geschirrspüler",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Fernseher",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Bettwäsche und Handtücher",
+            "value": true
+          }
+        ]
+      }
+    }
+  ]
 }
 </script>
 
