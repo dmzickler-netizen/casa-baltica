@@ -31,10 +31,14 @@
 <rect x="40" y="676" width="206" height="26" fill="#5E8FA6" opacity="0.18"></rect>
 <line x1="40" y1="702" x2="246" y2="702" stroke="#5E8FA6" stroke-width="1.5" stroke-dasharray="5 4"></line>
 <text x="142" y="693" text-anchor="middle" font-size="10" fill="#4A5A63" letter-spacing="1">MARKISE</text>
-<rect x="206" y="784" width="32" height="26" rx="4" fill="#5B6670"></rect>
-<line x1="210" y1="792" x2="234" y2="792" stroke="#9AA8AF" stroke-width="1"></line><line x1="210" y1="798" x2="234" y2="798" stroke="#9AA8AF" stroke-width="1"></line><line x1="210" y1="804" x2="234" y2="804" stroke="#9AA8AF" stroke-width="1"></line>
-<text x="222" y="826" text-anchor="middle" font-size="10" fill="#4A5A63">Grill</text>
 <text x="142" y="728" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3442">Terrasse</text>
+
+<!-- Zweite Terrasse vor dem Fenster von Wohnen/Essen, Grill ganz rechts -->
+<rect x="250" y="799" width="268" height="85" fill="url(#paver)"></rect>
+<text x="372" y="846" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3442">Terrasse</text>
+<rect x="476" y="818" width="32" height="26" rx="4" fill="#5B6670"></rect>
+<line x1="480" y1="826" x2="504" y2="826" stroke="#9AA8AF" stroke-width="1"></line><line x1="480" y1="832" x2="504" y2="832" stroke="#9AA8AF" stroke-width="1"></line><line x1="480" y1="838" x2="504" y2="838" stroke="#9AA8AF" stroke-width="1"></line>
+<text x="492" y="860" text-anchor="middle" font-size="10" fill="#4A5A63">Grill</text>
 
 <!-- Böden -->
 <rect x="100" y="20" width="162" height="140" fill="url(#tile)"></rect>
