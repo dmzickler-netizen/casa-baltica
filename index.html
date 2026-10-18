@@ -24,8 +24,7 @@
 <meta name="twitter:description" content="Gemütliche Ferienwohnung direkt an der Ostsee. 2 Schlafzimmer, Terrasse mit Garten, nur 100m zum Strand.">
 <meta name="twitter:image" content="https://dmzickler-netizen.github.io/casa-baltica/img/strand-panorama.jpg">
 
-<!-- Strukturierte Daten: nur Angaben, die auf dieser Seite belegt sind.
-     TODO: prüfen – maximale Belegung (4 Personen?) fehlt bewusst, bis bestätigt. -->
+<!-- Strukturierte Daten: nur Angaben, die auf dieser Seite belegt sind. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,7 +43,7 @@
     "@type": "PostalAddress",
     "streetAddress": "Kiefernweg 18, App. 4",
     "postalCode": "24217",
-    "addressLocality": "Schönberger Strand",
+    "addressLocality": "Schönberg, OT Schönberger Strand",
     "addressRegion": "Schleswig-Holstein",
     "addressCountry": "DE"
   },
@@ -54,6 +53,7 @@
   "containsPlace": {
     "@type": "Accommodation",
     "additionalType": "EntirePlace",
+    "occupancy": { "@type": "QuantitativeValue", "maxValue": 4 },
     "numberOfBedrooms": 2,
     "numberOfBathroomsTotal": 1,
     "floorSize": { "@type": "QuantitativeValue", "value": 50, "unitCode": "MTK" },
@@ -1113,7 +1113,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
 <section id="lage">
   <div class="section-header fade-in">
     <h2 data-i18n="loc.title">Mitten in der <strong>Probstei</strong></h2>
-    <p>Kiefernweg 18, App. 4 &mdash; 24217 Schönberger Strand</p>
+    <p>Kiefernweg 18, App. 4 &mdash; 24217 Schönberg, OT Schönberger Strand</p>
   </div>
 
   <div class="lage-grid fade-in">
@@ -1231,7 +1231,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
     </div>
 
     <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--warm-gray);" data-i18n="price.foot">
-      Kurtaxe wird vor Ort entrichtet. Mindestaufenthalt: 3 Nächte (Hauptsaison 7 Nächte).<br>
+      Kurtaxe wird vor Ort entrichtet. Mindestaufenthalt: 3 Nächte.<br>
       Verbindliche Preise und Verfügbarkeit über die Tourist-Info Schönberger Strand.
     </p>
   </div>
@@ -1273,7 +1273,6 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       </div>
       <div>
         <label for="inqGuests" data-i18n="inq.guests">Personen</label>
-        <!-- TODO: prüfen – maximale Belegung (4 Personen?) -->
         <select id="inqGuests" name="personen">
           <option>1</option><option selected>2</option><option>3</option><option>4</option>
         </select>
@@ -1321,7 +1320,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
     </a>
   </div>
   <p data-i18n="foot.copy">&copy; 2025 Casa Baltica — Ferienwohnung am Schönberger Strand</p>
-  <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.5;">Kiefernweg 18, App. 4 &middot; 24217 Schönberger Strand &middot; Schleswig-Holstein</p>
+  <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.5;">Kiefernweg 18, App. 4 &middot; 24217 Schönberg, OT Schönberger Strand &middot; Schleswig-Holstein</p>
 </footer>
 
 <!-- ===== JAVASCRIPT ===== -->
@@ -1371,7 +1370,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'price.low':'Nebensaison','price.mid':'Zwischensaison','price.high':'Hauptsaison','price.hol':'Feiertage',
       'price.holtime':'Weihnachten, Silvester, Ostern','price.holprice':'auf Anfrage',
       'price.incl':'Im Preis enthalten','price.i1':'Bettwäsche & Handtücher','price.i2':'Endreinigung','price.i4':'PKW-Stellplatz','price.i5':'Strom, Wasser, Heizung',
-      'price.foot':'Kurtaxe wird vor Ort entrichtet. Mindestaufenthalt: 3 Nächte (Hauptsaison 7 Nächte).<br>Verbindliche Preise und Verfügbarkeit über die Tourist-Info Schönberger Strand.',
+      'price.foot':'Kurtaxe wird vor Ort entrichtet. Mindestaufenthalt: 3 Nächte.<br>Verbindliche Preise und Verfügbarkeit über die Tourist-Info Schönberger Strand.',
       'book.title':'Ihren Urlaub <strong>buchen</strong>','book.sub':'Die Buchung und Abwicklung läuft über die Tourist-Info Schönberger Strand',
       'book.cta1':'🌊 Verfügbarkeit prüfen & buchen','book.cta2':'📞 Tourist-Info anrufen',
       'book.info':'Tourist-Information Schönberger Strand · Tel: 04344 4141-0<br>Objekt-Nr. 26118 · "Casa Baltica" — Kiefernweg 18, App. 4',
@@ -1415,7 +1414,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'price.low':'Low season','price.mid':'Mid season','price.high':'High season','price.hol':'Holidays',
       'price.holtime':'Christmas, New Year, Easter','price.holprice':'on request',
       'price.incl':'Included in the price','price.i1':'Bed linen & towels','price.i2':'Final cleaning','price.i4':'Parking space','price.i5':'Electricity, water, heating',
-      'price.foot':'Tourist tax payable locally. Minimum stay: 3 nights (high season 7 nights).<br>Binding prices and availability via Tourist Info Schönberger Strand.',
+      'price.foot':'Tourist tax payable locally. Minimum stay: 3 nights.<br>Binding prices and availability via Tourist Info Schönberger Strand.',
       'book.title':'Book your <strong>holiday</strong>','book.sub':'Booking and handling via Tourist Info Schönberger Strand',
       'book.cta1':'🌊 Check availability & book','book.cta2':'📞 Call Tourist Info',
       'book.info':'Tourist Information Schönberger Strand · Tel: +49 4344 4141-0<br>Property No. 26118 · "Casa Baltica" — Kiefernweg 18, Apt. 4',
@@ -1459,7 +1458,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
       'price.low':'Temporada baja','price.mid':'Temporada media','price.high':'Temporada alta','price.hol':'Festivos',
       'price.holtime':'Navidad, Fin de Año, Semana Santa','price.holprice':'a consultar',
       'price.incl':'Incluido en el precio','price.i1':'Ropa de cama y toallas','price.i2':'Limpieza final','price.i4':'Plaza de aparcamiento','price.i5':'Electricidad, agua, calefacción',
-      'price.foot':'Tasa turística se paga en el lugar. Estancia mínima: 3 noches (temporada alta 7 noches).<br>Precios y disponibilidad a través de la oficina de turismo de Schönberger Strand.',
+      'price.foot':'Tasa turística se paga en el lugar. Estancia mínima: 3 noches.<br>Precios y disponibilidad a través de la oficina de turismo de Schönberger Strand.',
       'book.title':'Reserve sus <strong>vacaciones</strong>','book.sub':'La reserva se gestiona a través de la oficina de turismo de Schönberger Strand',
       'book.cta1':'🌊 Consultar disponibilidad y reservar','book.cta2':'📞 Llamar a la oficina de turismo',
       'book.info':'Oficina de Turismo Schönberger Strand · Tel: +49 4344 4141-0<br>N.° de objeto: 26118 · "Casa Baltica" — Kiefernweg 18, Apt. 4',
