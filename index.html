@@ -401,7 +401,8 @@ section { padding: 5rem 2rem; }
   max-width: 500px; margin: 3rem auto 0; text-align: center;
 }
 .grundriss-section img {
-  width: 100%; max-width: 400px; border-radius: 12px;
+  display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto;
+  background: var(--white); border-radius: 12px; cursor: zoom-in;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 .grundriss-section p {
@@ -1150,7 +1151,7 @@ nav { transition: box-shadow 250ms var(--ease-out); }
 
       <div class="grundriss-section">
         <h3>📐 Grundriss</h3>
-        <img src="img/grundriss.jpg" alt="Grundriss der Wohnung" loading="lazy" onclick="openLightboxSingle('img/grundriss.jpg', 'Grundriss — ca. 50 m²')">
+        <img src="img/grundriss-casa-baltica.svg" alt="Grundriss der Ferienwohnung Casa Baltica" loading="lazy" width="540" height="900" onclick="openLightboxSingle('img/grundriss-casa-baltica.svg', 'Grundriss — ca. 50 m²')">
         <p>ca. 50 m² — 2 Schlafzimmer, Wohnküche, Bad, Flur</p>
       </div>
     </div>

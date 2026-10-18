@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 900" width="540" height="900" role="img" aria-label="Grundriss der Ferienwohnung mit Schlafzimmer, zweitem Schlafzimmer, Wohn- und Essbereich, Küche, Bad, Flur und Außenbereich" style="display: block; font-family: Manrope, 'Helvetica Neue', Arial, sans-serif">
+<defs>
+<pattern id="wood" width="14" height="60" patternUnits="userSpaceOnUse">
+<rect width="14" height="60" fill="#EBDABD"></rect>
+<line x1="0" y1="0" x2="0" y2="60" stroke="#DCC7A4" stroke-width="1"></line>
+<line x1="0" y1="38" x2="14" y2="38" stroke="#DCC7A4" stroke-width="0.8"></line>
+</pattern>
+<pattern id="tile" width="12" height="12" patternUnits="userSpaceOnUse">
+<rect width="12" height="12" fill="#E4ECEC"></rect>
+<path d="M12 0V12H0" fill="none" stroke="#CBD8D9" stroke-width="0.8"></path>
+</pattern>
+<pattern id="paver" width="22" height="22" patternUnits="userSpaceOnUse">
+<rect width="22" height="22" fill="#E7E0D3"></rect>
+<path d="M22 0V22H0" fill="none" stroke="#D3C8B5" stroke-width="1"></path>
+</pattern>
+</defs>
+
+<!-- Treppenhaus (außerhalb) -->
+<rect x="14" y="250" width="140" height="120" fill="#ECE7DE"></rect>
+<g stroke="#C9C0B0" stroke-width="1">
+<line x1="34" y1="250" x2="34" y2="370"></line><line x1="54" y1="250" x2="54" y2="370"></line><line x1="74" y1="250" x2="74" y2="370"></line><line x1="94" y1="250" x2="94" y2="370"></line><line x1="114" y1="250" x2="114" y2="370"></line><line x1="134" y1="250" x2="134" y2="370"></line>
+</g>
+<text x="84" y="315" text-anchor="middle" font-size="11" fill="#7D7466" letter-spacing="1.5">TREPPENHAUS</text>
+
+<!-- Außenbereich -->
+<path d="M30 672 L250 672 L250 884 L70 884 Q22 800 30 672 Z" fill="url(#paver)"></path>
+<path d="M30 672 Q22 800 70 884" fill="none" stroke="#8FAE8B" stroke-width="10" stroke-linecap="round" opacity="0.7"></path>
+<circle cx="214" cy="850" r="18" fill="#A9C3A1"></circle><circle cx="226" cy="838" r="11" fill="#93B38C"></circle>
+<rect x="110" y="740" width="64" height="40" rx="6" fill="#FFFFFF" stroke="#9AA8AF" stroke-width="1.2"></rect>
+<circle cx="98" cy="760" r="9" fill="#FFFFFF" stroke="#9AA8AF" stroke-width="1.2"></circle><circle cx="186" cy="760" r="9" fill="#FFFFFF" stroke="#9AA8AF" stroke-width="1.2"></circle>
+<rect x="40" y="676" width="206" height="26" fill="#5E8FA6" opacity="0.18"></rect>
+<line x1="40" y1="702" x2="246" y2="702" stroke="#5E8FA6" stroke-width="1.5" stroke-dasharray="5 4"></line>
+<text x="142" y="693" text-anchor="middle" font-size="10" fill="#4A5A63" letter-spacing="1">MARKISE</text>
+<rect x="206" y="784" width="32" height="26" rx="4" fill="#5B6670"></rect>
+<line x1="210" y1="792" x2="234" y2="792" stroke="#9AA8AF" stroke-width="1"></line><line x1="210" y1="798" x2="234" y2="798" stroke="#9AA8AF" stroke-width="1"></line><line x1="210" y1="804" x2="234" y2="804" stroke="#9AA8AF" stroke-width="1"></line>
+<text x="222" y="826" text-anchor="middle" font-size="10" fill="#4A5A63">Grill</text>
+<text x="142" y="728" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3442">Terrasse</text>
+
+<!-- Böden -->
+<rect x="100" y="20" width="162" height="140" fill="url(#tile)"></rect>
+<rect x="262" y="20" width="256" height="228" fill="url(#wood)"></rect>
+<path d="M160 160 H262 V248 H348 V380 H160 Z" fill="#F1E7D4"></path>
+<rect x="348" y="248" width="170" height="132" fill="url(#tile)"></rect>
+<rect x="30" y="375" width="225" height="290" fill="url(#wood)"></rect>
+<rect x="255" y="380" width="263" height="415" fill="url(#wood)"></rect>
+
+<!-- Bad -->
+<rect x="108" y="28" width="60" height="58" rx="4" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<line x1="108" y1="28" x2="168" y2="86" stroke="#C3D0D4" stroke-width="1"></line><line x1="168" y1="28" x2="108" y2="86" stroke="#C3D0D4" stroke-width="1"></line>
+<circle cx="138" cy="57" r="3" fill="#8A9AA3"></circle>
+<rect x="222" y="44" width="32" height="40" rx="6" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<ellipse cx="240" cy="64" rx="9" ry="12" fill="#E4ECEC"></ellipse>
+<rect x="110" y="112" width="20" height="38" rx="3" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<ellipse cx="143" cy="131" rx="15" ry="12" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></ellipse>
+<text x="200" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3442">Bad</text>
+<text x="200" y="134" text-anchor="middle" font-size="11" fill="#4A5A63">3,59 m²</text>
+
+<!-- Schlafzimmer -->
+<rect x="266" y="24" width="34" height="132" fill="#F7F2EA" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<line x1="266" y1="68" x2="300" y2="68" stroke="#8A9AA3" stroke-width="1"></line><line x1="266" y1="112" x2="300" y2="112" stroke="#8A9AA3" stroke-width="1"></line>
+<rect x="364" y="62" width="146" height="134" rx="6" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<rect x="364" y="62" width="100" height="134" rx="6" fill="#5E8FA6" opacity="0.85"></rect>
+<path d="M440 62 L464 62 L464 196 L440 196 Z" fill="#FFFFFF" opacity="0.35"></path>
+<rect x="472" y="70" width="32" height="56" rx="8" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="472" y="132" width="32" height="56" rx="8" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="484" y="28" width="26" height="26" rx="4" fill="#E2CDA8" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="484" y="204" width="26" height="26" rx="4" fill="#E2CDA8" stroke="#8A9AA3" stroke-width="1"></rect>
+<text x="330" y="222" text-anchor="start" font-size="15" font-weight="600" fill="#1E3442">Schlafzimmer</text>
+
+<!-- Flur -->
+<rect x="268" y="254" width="76" height="40" fill="#F7F2EA" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<line x1="306" y1="254" x2="306" y2="294" stroke="#8A9AA3" stroke-width="1"></line>
+<text x="250" y="330" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3442">Flur</text>
+
+<!-- Küche -->
+<path d="M352 252 H512 V278 H380 V376 H352 Z" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></path>
+<circle cx="404" cy="265" r="6" fill="none" stroke="#8A9AA3" stroke-width="1.2"></circle><circle cx="424" cy="265" r="6" fill="none" stroke="#8A9AA3" stroke-width="1.2"></circle>
+<rect x="356" y="300" width="20" height="30" rx="4" fill="#E4ECEC" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="480" y="252" width="32" height="26" fill="#EEF2F2" stroke="#8A9AA3" stroke-width="1"></rect>
+<text x="448" y="330" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3442">Küche</text>
+
+<!-- Schlafzimmer 2 -->
+<rect x="36" y="380" width="114" height="36" fill="#F7F2EA" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<line x1="74" y1="380" x2="74" y2="416" stroke="#8A9AA3" stroke-width="1"></line><line x1="112" y1="380" x2="112" y2="416" stroke="#8A9AA3" stroke-width="1"></line>
+<rect x="40" y="496" width="62" height="152" rx="6" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<rect x="40" y="496" width="62" height="108" rx="6" fill="#5E8FA6" opacity="0.85"></rect>
+<rect x="48" y="614" width="46" height="28" rx="8" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="186" y="496" width="62" height="152" rx="6" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<rect x="186" y="496" width="62" height="108" rx="6" fill="#5E8FA6" opacity="0.85"></rect>
+<rect x="194" y="614" width="46" height="28" rx="8" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="124" y="618" width="24" height="24" rx="4" fill="#E2CDA8" stroke="#8A9AA3" stroke-width="1"></rect>
+<text x="144" y="455" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3442">Schlafzimmer 2</text>
+
+<!-- Wohnen & Essen -->
+<rect x="340" y="580" width="118" height="128" rx="10" fill="#E8D5C0" opacity="0.7"></rect>
+<rect x="446" y="572" width="66" height="138" rx="10" fill="#5E8FA6"></rect>
+<rect x="476" y="580" width="30" height="58" rx="6" fill="#FFFFFF" opacity="0.35"></rect><rect x="476" y="644" width="30" height="58" rx="6" fill="#FFFFFF" opacity="0.35"></rect>
+<rect x="370" y="610" width="46" height="66" rx="6" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<rect x="362" y="512" width="62" height="60" rx="10" fill="#5E8FA6" opacity="0.8"></rect>
+<rect x="370" y="512" width="46" height="18" rx="5" fill="#FFFFFF" opacity="0.35"></rect>
+<rect x="350" y="734" width="110" height="46" rx="6" fill="#D9BC91" stroke="#8A9AA3" stroke-width="1.2"></rect>
+<rect x="368" y="712" width="26" height="18" rx="4" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="416" y="712" width="26" height="18" rx="4" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="330" y="744" width="16" height="26" rx="4" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<rect x="464" y="744" width="16" height="26" rx="4" fill="#FFFFFF" stroke="#8A9AA3" stroke-width="1"></rect>
+<circle cx="296" cy="440" r="14" fill="#A9C3A1"></circle><circle cx="304" cy="432" r="8" fill="#93B38C"></circle>
+<text x="290" y="485" text-anchor="start" font-size="15" font-weight="600" fill="#1E3442">Wohnen</text>
+<text x="290" y="690" text-anchor="start" font-size="15" font-weight="600" fill="#1E3442">Essen</text>
+
+<!-- Fenster -->
+<g stroke="#A9C9D8" stroke-width="8" stroke-linecap="butt">
+<line x1="180" y1="20" x2="235" y2="20"></line>
+<line x1="345" y1="20" x2="465" y2="20"></line>
+<line x1="518" y1="300" x2="518" y2="360"></line>
+<line x1="295" y1="795" x2="485" y2="795"></line>
+<line x1="75" y1="665" x2="190" y2="665"></line>
+</g>
+<g stroke="#1E3442" stroke-width="1">
+<line x1="180" y1="20" x2="235" y2="20"></line>
+<line x1="345" y1="20" x2="465" y2="20"></line>
+<line x1="518" y1="300" x2="518" y2="360"></line>
+<line x1="295" y1="795" x2="485" y2="795"></line>
+<line x1="75" y1="665" x2="190" y2="665"></line>
+</g>
+
+<!-- Wände -->
+<g stroke="#1E3442" stroke-width="8" stroke-linecap="square" fill="none">
+<path d="M180 20 H100 V160 H160 V170"></path>
+<path d="M235 20 H345"></path>
+<path d="M465 20 H518 V300"></path>
+<path d="M518 360 V795 H485"></path>
+<path d="M295 795 H255 V770"></path>
+<path d="M255 690 V665 H190"></path>
+<path d="M75 665 H30 V375 H160 V240"></path>
+</g>
+<g stroke="#1E3442" stroke-width="5" stroke-linecap="square" fill="none">
+<path d="M160 160 H195"></path>
+<path d="M240 160 H262"></path>
+<path d="M262 20 V165"></path>
+<path d="M262 238 V248 H518"></path>
+<path d="M348 248 V380"></path>
+<path d="M255 380 H265"></path>
+<path d="M335 380 H348"></path>
+<path d="M160 375 H180"></path>
+<path d="M245 375 H255 V665"></path>
+</g>
+
+<!-- Türen -->
+<g stroke="#5E6E77" stroke-width="1.4" fill="none">
+<line x1="160" y1="240" x2="230" y2="240"></line><path d="M230 240 A70 70 0 0 0 160 170" stroke-dasharray="3 3"></path>
+<line x1="240" y1="160" x2="240" y2="115"></line><path d="M240 115 A45 45 0 0 0 195 160" stroke-dasharray="3 3"></path>
+<line x1="262" y1="165" x2="335" y2="165"></line><path d="M335 165 A73 73 0 0 1 262 238" stroke-dasharray="3 3"></path>
+<line x1="245" y1="375" x2="245" y2="440"></line><path d="M245 440 A65 65 0 0 1 180 375" stroke-dasharray="3 3"></path>
+<line x1="265" y1="380" x2="265" y2="450"></line><path d="M265 450 A70 70 0 0 0 335 380" stroke-dasharray="3 3"></path>
+<line x1="255" y1="770" x2="335" y2="770"></line><path d="M335 770 A80 80 0 0 0 255 690" stroke-dasharray="3 3"></path>
+</g>
+
+<!-- Eingang -->
+<g>
+<rect x="104" y="188" width="44" height="34" rx="17" fill="#5E8FA6"></rect>
+<path d="M116 205 H136 M130 199 L136 205 L130 211" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+<text x="126" y="238" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3442" letter-spacing="1">EINGANG</text>
+</g>
+</svg>
